@@ -182,7 +182,7 @@ Blockly.Blocks['robot_set_variable'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("Set variable")
-        .appendField(new Blockly.FieldDropdown([["variableA","variableA"], ["variableB","variableB"], ["variableC","variableC"]]), "variableName")
+        .appendField(new Blockly.FieldDropdown([["variableA","variableA"], ["variableB","variableB"], ["variableC","variableC"], ["variableD","variableD"]]), "variableName")
         .appendField("to")
         .appendField(new Blockly.FieldNumber(0), "newValue");
     this.setPreviousStatement(true, null);
@@ -197,7 +197,7 @@ Blockly.Blocks['robot_change_variable'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("Change variable")
-        .appendField(new Blockly.FieldDropdown([["variableA","variableA"], ["variableB","variableB"], ["variableC","variableC"]]), "variableName")
+        .appendField(new Blockly.FieldDropdown([["variableA","variableA"], ["variableB","variableB"], ["variableC","variableC"], ["variableD","variableD"]]), "variableName")
         .appendField("by")
         .appendField(new Blockly.FieldNumber(0), "deltaValue");
     this.setPreviousStatement(true, null);
@@ -212,7 +212,7 @@ Blockly.Blocks['robot_set_text_variable'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("Set robot's text to")
-        .appendField(new Blockly.FieldDropdown([["variableA","variableA"], ["variableB","variableB"], ["variableC","variableC"]]), "variableName");
+        .appendField(new Blockly.FieldDropdown([["variableA","variableA"], ["variableB","variableB"], ["variableC","variableC"], ["variableD","variableD"]]), "variableName");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(105);
@@ -225,7 +225,7 @@ Blockly.Blocks['robot_get_variable'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("Get ")
-        .appendField(new Blockly.FieldDropdown([["variableA","variableA"], ["variableB","variableB"], ["variableC","variableC"]]), "variableName");
+        .appendField(new Blockly.FieldDropdown([["variableA","variableA"], ["variableB","variableB"], ["variableC","variableC"], ["variableD","variableD"]]), "variableName");
     this.setOutput(true, "Number");
     this.setColour(300);
  this.setTooltip("Gets the value of the given variable.");
@@ -689,7 +689,8 @@ var options = {
 	disable : true, 
 	maxBlocks : Infinity, 
 	trashcan : true, 
-	horizontalLayout : false, 
+	trashcan : true,
+	horizontalLayout : false,
 	toolboxPosition : 'start', 
 	css : true, 
 	media : 'https://blockly-demo.appspot.com/static/media/', 

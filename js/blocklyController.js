@@ -13,6 +13,7 @@ class BlocklyController {
         this.variableA = 0;
         this.variableB = 0;
         this.variableC = 0;
+        this.variableD = 0;
     }
 
     getAction(timestamp, sensorReadings, redPuckHeld, greenPuckHeld) {
@@ -51,6 +52,7 @@ class BlocklyController {
                 var variableA = this.variableA;
                 var variableB = this.variableB;
                 var variableC = this.variableC;
+                var variableD = this.variableD;
                 var executed = false;
                 var holdTime = 0;
                 var emitPheromone = 0;
@@ -72,6 +74,7 @@ class BlocklyController {
                 this.variableA = variableA;
                 this.variableB = variableB;
                 this.variableC = variableC;
+                this.variableD = variableD;
 
                 document.getElementById('statusMessage').innerHTML = "Status: Good";
                 document.getElementById('statusMessage').style.backgroundColor = "green";
